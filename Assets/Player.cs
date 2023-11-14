@@ -19,4 +19,5 @@ public class Player : MonoBehaviour
       rigidbody.velocity = Vector2.up * velocity;
     }
   }
+
 }
