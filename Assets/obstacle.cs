@@ -8,7 +8,7 @@ public class Obstacle : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    float baguetteSpeed = (1 + Baguette.nombreDeBaguette * 0.1f);
+    float baguetteSpeed = (1 + Baguette.nombreDeBaguette * 0.2f);
 
     transform.position += ((Vector3.left * speed * baguetteSpeed) * Time.deltaTime);
   }

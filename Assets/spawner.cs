@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        float baguetteSpeed = (1 + Baguette.nombreDeBaguette * 0.1f);
+        float baguetteSpeed = (1 + Baguette.nombreDeBaguette * 0.2f);
 
         if (time > (queueTime / baguetteSpeed))
         {
