@@ -857,9 +857,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c49501ea7bcd44608f14f947acafd47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  queueTime: 11
+  queueTime: 20
   obstacle: {fileID: 4788843028868185502, guid: 108f89986eb454cd194357e5aa8f879a, type: 3}
-  height: 0.2
+  height: 0.4
 --- !u!4 &673591478
 Transform:
   m_ObjectHideFlags: 0
