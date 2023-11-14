@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class Spawner : MonoBehaviour
 {
-    public float queueTime = 1.5F;
+    public float queueTime = 1.5f;
     private float time = 0;
     public GameObject obstacle;
+    public GameObject warningPrefab; // Ajout du préfab d'avertissement
     public float height;
-    // Update is called once per frame
 
-    void Start() 
+    void Start()
     {
-      Time.timeScale = 0;
+        Time.timeScale = 0;
     }
 
     void Update()
@@ -20,11 +21,24 @@ public class Spawner : MonoBehaviour
 
         if (time > (queueTime / baguetteSpeed))
         {
-            GameObject go = Instantiate(obstacle);
-            go.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
+            // Instancier l'avertissement
+            GameObject warning = Instantiate(warningPrefab);
+            warning.transform.position = transform.position + new Vector3((float)-0.4, Random.Range(-height, height), 0);
+            Destroy(warning, 1f); // Détruire l'avertissement après une seconde
+
+            // Utiliser Invoke pour retarder l'instanciation de l'obstacle
+            Invoke(nameof(SpawnObstacle), 1f);
+            
             time = 0;
-            Destroy(go, 10);
         }
         time += Time.deltaTime;
+    }
+
+    void SpawnObstacle()
+    {
+        // Instancier l'obstacle après l'avertissement
+        GameObject go = Instantiate(obstacle);
+        go.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
+        Destroy(go, 10);
     }
 }
