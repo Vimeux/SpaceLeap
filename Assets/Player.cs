@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class PlayerSript : MonoBehaviour
+public class Player : MonoBehaviour
 {
   public float velocity = 2.4f;
   private Rigidbody2D rigidbody;
+  public bool isDead = false;
   // Start is called before the first frame update
   void Start()
   {
