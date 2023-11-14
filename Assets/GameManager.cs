@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject startButton;
     public Text gameOverCountdown;
     public float countTimer = 5;
 
-    public AudioSource audioSource;
-    // Start is called before the first frame update
+    public AudioSource backgroundSound;
+    public AudioSource startSoundPesquet;
+    public AudioSource restartPesquet;
+
+
     void Start()
     {
-        audioSource.Stop();
+        backgroundSound.Stop();
+        startSoundPesquet.Stop();
+        restartPesquet.Stop();
+
         gameOverCountdown.gameObject.SetActive(false);
         Time.timeScale = 0;
     }
@@ -26,6 +32,7 @@ public class GameManager : MonoBehaviour
             gameOverCountdown.text = "Restarting in " + (countTimer).ToString("0");
             if (countTimer < 0)
             {
+                restartPesquet.Play();
                 Player.isDead = false;
                 Baguette.nombreDeBaguette = 0;
                 RestartGame();
@@ -33,9 +40,12 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+
     public void StartGame()
     {
-        audioSource.Play();
+        backgroundSound.Play();
+        startSoundPesquet.Play();
         startButton.SetActive(false);
         Time.timeScale = 1;
 
@@ -44,9 +54,12 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
     }
+
     public void RestartGame()
     {
-        EditorSceneManager.LoadScene(0);
-        audioSource.Stop();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        backgroundSound.Stop();
+        startSoundPesquet.Stop();
+        
     }
 }

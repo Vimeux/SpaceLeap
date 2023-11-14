@@ -6,13 +6,14 @@ public class Player : MonoBehaviour
   public float velocity = 2.4f;
   private Rigidbody2D rigidbody;
 
+  public AudioSource boomSound;
 
-  // public GameManager gameManager;
   public static bool isDead = false;
 
 
   void Start()
   {
+    boomSound.Stop();
     rigidbody = GetComponent<Rigidbody2D>();
   }
 
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
   private void OnCollisionEnter2D(Collision2D collision)
   {
     isDead = true;
+    boomSound.Play();
     GameManager.GameOver();
   }
 
