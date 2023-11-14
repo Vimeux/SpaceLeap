@@ -8,6 +8,12 @@ public class Spawner : MonoBehaviour
     public GameObject obstacle;
     public float height;
     // Update is called once per frame
+
+    void Start() 
+    {
+      Time.timeScale = 0;
+    }
+
     void Update()
     {
         float baguetteSpeed = (1 + Baguette.nombreDeBaguette * 0.1f);
