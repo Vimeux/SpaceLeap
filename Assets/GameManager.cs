@@ -8,9 +8,12 @@ public class GameManager : MonoBehaviour
     public GameObject startButton;
     public Text gameOverCountdown;
     public float countTimer = 5;
+
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource.Stop();
         gameOverCountdown.gameObject.SetActive(false);
         Time.timeScale = 0;
     }
@@ -32,8 +35,10 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
+        audioSource.Play();
         startButton.SetActive(false);
         Time.timeScale = 1;
+
     }
     public static void GameOver()
     {
@@ -42,5 +47,6 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         EditorSceneManager.LoadScene(0);
+        audioSource.Stop();
     }
 }
