@@ -21,10 +21,13 @@ public class Spawner : MonoBehaviour
 
         if (time > (queueTime / baguetteSpeed))
         {
-            // Instancier l'avertissement
-            GameObject warning = Instantiate(warningPrefab);
-            warning.transform.position = transform.position + new Vector3((float)-0.4, Random.Range(-height, height), 0);
-            Destroy(warning, 1f); // Détruire l'avertissement après une seconde
+            if (warningPrefab != null) // Vérifier si le préfab est null
+            {
+                // Instancier l'avertissement
+                GameObject warning = Instantiate(warningPrefab);
+                warning.transform.position = transform.position + new Vector3((float)-0.4, Random.Range(-height, height), 0);
+                Destroy(warning, 1f); // Détruire l'avertissement après une seconde
+            }
 
             // Utiliser Invoke pour retarder l'instanciation de l'obstacle
             Invoke(nameof(SpawnObstacle), 1f);
