@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   queueTime: 5
   obstacle: {fileID: 4683612281141645395, guid: 6c255fac9705a495c9bfb3361f695ddb, type: 3}
-  warningPrefab: {fileID: 0}
+  warningPrefab: {fileID: 1926216771668100594, guid: 6bf9d3c0250c64a39932ffb5cedb0a70, type: 3}
   height: 1
 --- !u!4 &845518020
 Transform:
