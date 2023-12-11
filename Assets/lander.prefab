@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7179204479570234396}
   - component: {fileID: 8004637113670464613}
   - component: {fileID: 6758343057712744362}
+  - component: {fileID: 8559731470816748183}
   m_Layer: 0
   m_Name: lander
   m_TagString: Untagged
@@ -180,3 +181,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.3217949, y: 1.252352}
   m_Size: {x: 0.30786642, y: 0.65981656}
   m_Direction: 0
+--- !u!114 &8559731470816748183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504172710486045492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e3bf84588364f78b65b425f5045334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite1: {fileID: 21300000, guid: c27aa9a8c37d74331bd055f971301791, type: 3}
+  sprite2: {fileID: 21300000, guid: 5423ef6c515a94680906bea4db7d7a25, type: 3}

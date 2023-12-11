@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 300356911}
   - component: {fileID: 300356913}
   - component: {fileID: 300356914}
+  - component: {fileID: 300356915}
   m_Layer: 0
   m_Name: moon ground
   m_TagString: Untagged
@@ -481,6 +482,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &300356915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300356910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e3bf84588364f78b65b425f5045334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite1: {fileID: 21300000, guid: 5f9818587b4424845976c7f10d7649b4, type: 3}
+  sprite2: {fileID: 21300000, guid: 9971312d8edad4212a6a41b43610e99e, type: 3}
 --- !u!1 &459227563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1211084392}
   - component: {fileID: 1211084391}
+  - component: {fileID: 1211084393}
   m_Layer: 0
   m_Name: space_Background
   m_TagString: Untagged
@@ -1238,6 +1254,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211084393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211084390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e3bf84588364f78b65b425f5045334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite1: {fileID: 21300000, guid: 84cc6d533c1a74e8ba0303bae68f2206, type: 3}
+  sprite2: {fileID: 21300000, guid: 5e6e46c5676884a719afe930a1db8a82, type: 3}
 --- !u!1 &1318761661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1424,7 @@ GameObject:
   - component: {fileID: 1478218928}
   - component: {fileID: 1478218927}
   - component: {fileID: 1478218926}
+  - component: {fileID: 1478218931}
   m_Layer: 0
   m_Name: Pesquet
   m_TagString: Player
@@ -1544,6 +1575,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1478218931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478218925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e3bf84588364f78b65b425f5045334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite1: {fileID: 21300000, guid: 0aa130b3a7cc470aa4eb78f2cdb06fa3, type: 3}
+  sprite2: {fileID: 21300000, guid: ec1a40c6c6aab478299949e45392ac68, type: 3}
 --- !u!1 &1784729322
 GameObject:
   m_ObjectHideFlags: 0
